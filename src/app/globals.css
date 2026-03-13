@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design tokens ─── */
+:root {
+  --background: #F5F0E8;
+  --foreground: #2C2C2C;
+}
+
+/* ─── Base styles ─── */
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-dm-sans), sans-serif;
+
+  /* Graph-paper background texture */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.04) 0px,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+}
+
+/* ─── Caveat utility for headings ─── */
+.font-heading {
+  font-family: var(--font-caveat), cursive;
+}
+
+/* ─── Selection colour ─── */
+::selection {
+  background-color: #E8B84B;
+  color: #1A1A2E;
+}
+
+/* ─── Smooth scroll ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ─── Page Transitions ─── */
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: pageFadeIn 0.4s ease-out both;
+}
+
+.page-transition > *:nth-child(1) { animation-delay: 0.05s; }
+.page-transition > *:nth-child(2) { animation-delay: 0.15s; }
+.page-transition > *:nth-child(3) { animation-delay: 0.25s; }
+.page-transition > *:nth-child(4) { animation-delay: 0.35s; }
+.page-transition > *:nth-child(5) { animation-delay: 0.45s; }
+.page-transition > *:nth-child(6) { animation-delay: 0.55s; }
+
