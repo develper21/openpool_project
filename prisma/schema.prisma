@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  passwordHash   String
+  name           String
+  role           Role      @default(RESEARCHER)
+  apiKey         String    @unique @default(cuid())
+  apiCallsCount  Int       @default(0)
+  apiCallsLimit  Int       @default(100)
+  isActive       Boolean   @default(true)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  summaries      Summary[]
+  feedbacks      Feedback[]
+  auditLogs      AuditLog[]
+  apiKeys        ApiKey[]
+}
+
+model ApiKey {
+  id            String    @id @default(cuid())
+  name          String
+  key           String    @unique
+  maskedKey     String
+  tier          String    @default("BASIC")
+  usage         Int       @default(0)
+  limit         Int       @default(1000)
+  lastUsedAt    DateTime?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Paper {
+  id            String      @id @default(cuid())
+  pubmedId      String?     @unique
+  title         String
+  authors       String[]
+  abstract      String      @db.Text
+  fullText      String?     @db.Text
+  doi           String?
+  publishedDate String?
+  journal       String?
+  sourceType    SourceType
+  pdfPath       String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  summaries     Summary[]
+}
+
+model Summary {
+  id                String        @id @default(cuid())
+  paperId           String
+  userId            String
+  keyFindings       String[]
+  methodology       String[]
+  conclusions       String[]
+  backgroundContext String        @db.Text
+  limitations       String[]
+  futureDirections  String[]
+  tags              String[]
+  model             String
+  processingTimeMs  Int?
+  tokenCount        Int?
+  status            SummaryStatus @default(PENDING)
+  errorMessage      String?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  paper             Paper         @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  user              User          @relation(fields: [userId], references: [id])
+  feedbacks         Feedback[]
+}
+
+model Feedback {
+  id              String   @id @default(cuid())
+  summaryId       String
+  userId          String
+  accuracyRating  Int
+  coherenceRating Int
+  overallRating   Int
+  comment         String?  @db.Text
+  isHelpful       Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  summary         Summary  @relation(fields: [summaryId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id])
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  userId      String?
+  action      String
+  resource    String
+  resourceId  String?
+  ipAddress   String?
+  userAgent   String?
+  statusCode  Int?
+  duration    Int?
+  createdAt   DateTime @default(now())
+  user        User?    @relation(fields: [userId], references: [id])
+}
+
+enum Role {
+  ADMIN
+  RESEARCHER
+  VIEWER
+}
+
+enum SourceType {
+  PUBMED
+  PDF
+  MANUAL
+}
+
+enum SummaryStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
