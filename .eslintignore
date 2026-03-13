@@ -1,0 +1,12 @@
+backend/*
+prisma/*
+fix-fonts.js
+fix-aria.js
+remove-logs.js
+fix-mobile.js
+add-meta.js
+build_log*.txt
+eslint.txt
+git_changes.txt
+git_status*.txt
+current_git_status.txt
