@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CONSTANTS = void 0;
+exports.CONSTANTS = {
+    BCRYPT_ROUNDS: 12,
+    ACCESS_TOKEN_EXPIRY: '15m',
+    REFRESH_TOKEN_EXPIRY: '7d',
+    MAX_FILE_SIZE_BYTES: 10 * 1024 * 1024,
+    PUBMED_CACHE_TTL: 24 * 60 * 60,
+    SUMMARY_CACHE_TTL: 60 * 60,
+    MAX_TEXT_CHARS_FOR_AI: 12000,
+    ALLOWED_MIME_TYPES: ['application/pdf'],
+};
