@@ -314,7 +314,7 @@ export async function POST(req: Request): Promise<NextResponse> {
 
     return NextResponse.json(finalData);
   } catch (error: unknown) {
-    console.error("Distill Summarize API Error:", error);
+    console.error("Papero Summarize API Error:", error);
     const message = error instanceof Error ? error.message : "An unexpected error occurred.";
     return NextResponse.json({ error: message }, { status: 500 });
   }
