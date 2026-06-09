@@ -242,7 +242,7 @@ export default function FeedbackPage() {
           <div className="flex-1 text-left">
             <h1 className="font-caveat text-5xl md:text-6xl text-ink">Share Your Thoughts ✦</h1>
             <p className="font-sans text-lg text-charcoal/60 mt-2">
-              Help us make Distill better for researchers like you
+              Help us make Papero better for researchers like you
             </p>
           </div>
           <div className="w-full max-w-[320px] h-[140px] hidden md:block mt-[-20px]">
@@ -257,7 +257,7 @@ export default function FeedbackPage() {
               <DoodleCard className="p-12 text-center flex flex-col items-center animate-in zoom-in-95 duration-500">
                 <SuccessScientistIcon />
                 <p className="font-caveat text-2xl text-charcoal/80 mt-6 max-w-sm">
-                  We got it. Your feedback helps us improve Distill.
+                  We got it. Your feedback helps us improve Papero.
                 </p>
                 <DoodleButton 
                   variant="ghost" 
