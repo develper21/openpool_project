@@ -90,7 +90,7 @@ export default function RegisterPage() {
                 stroke="#1A1A2E" strokeWidth="1.8" strokeLinecap="round" fill="#8FAF72" fillOpacity="0.2" />
               <path d="M 14 8 L 26 8" stroke="#1A1A2E" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            <span className="font-caveat text-xl text-ink font-bold">Distill</span>
+            <span className="font-caveat text-xl text-ink font-bold">Papero</span>
           </Link>
         </div>
 
@@ -101,7 +101,7 @@ export default function RegisterPage() {
               <div className="text-center">
                 <h1 className="font-caveat text-4xl text-ink mb-1">Create your account</h1>
                 <p className="font-sans text-sm text-charcoal/50">
-                  Start distilling research papers today
+                  Start analyzing research papers today
                 </p>
               </div>
 
