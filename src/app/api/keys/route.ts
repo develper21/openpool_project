@@ -68,8 +68,8 @@ export async function POST(request: Request) {
     if (newTier === "RESEARCHER") limit = 10000;
     if (newTier === "ADMIN") limit = 50000;
 
-    const rawKey = `distill_${crypto.randomBytes(32).toString('hex')}`;
-    const maskedKey = `distill_••••••••${rawKey.slice(-4)}`;
+    const rawKey = `papero_${crypto.randomBytes(32).toString('hex')}`;
+    const maskedKey = `papero_••••••••${rawKey.slice(-4)}`;
 
     const newKey = await prisma.apiKey.create({
       data: {
