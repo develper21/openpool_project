@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * Small UI SVGs for the Distill Summary output and section tabs.
+ * Small UI SVGs for the Papero Summary output and section tabs.
  */
 
 export function LightbulbDoodle() {
