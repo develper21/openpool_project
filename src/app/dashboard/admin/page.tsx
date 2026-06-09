@@ -34,7 +34,7 @@ export default function AdminOverviewPage() {
         <div>
           <h1 className="font-caveat text-[52px] text-ink leading-none mt-4">Mission Control ✦</h1>
           <p className="font-sans text-charcoal/70 mt-1">
-            Here's what's happening across Distill right now
+            Here's what's happening across Papero right now
           </p>
         </div>
 
@@ -171,7 +171,9 @@ export default function AdminOverviewPage() {
                   <path d="M4.93 19.07l2.83-2.83"></path>
                   <path d="M16.24 7.76l2.83-2.83"></path>
                </svg>
-               <path d="M 12 12 L 15 5" stroke="#E26D5C" strokeWidth="2" strokeLinecap="round" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+               <svg viewBox="0 0 24 24" width="20" height="20" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                  <path d="M 12 12 L 15 5" stroke="#E26D5C" strokeWidth="2" strokeLinecap="round" fill="none" />
+               </svg>
             </div>
           </div>
           <div className="flex items-end gap-3 mt-4">
