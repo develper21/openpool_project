@@ -56,8 +56,8 @@ const initialKeys: ApiKey[] = [
   {
     id: "1",
     name: "Production Server",
-    maskedKey: "distill_••••••••1234",
-    key: "distill_realapikey1234",
+    maskedKey: "papero_••••••••1234",
+    key: "papero_realapikey1234",
     tier: "RESEARCHER",
     created: "Oct 12, 2024",
     usage: 3450,
@@ -66,8 +66,8 @@ const initialKeys: ApiKey[] = [
   {
     id: "2",
     name: "Local Dev Testing",
-    maskedKey: "distill_••••••••8x9f",
-    key: "distill_realapikey8x9f",
+    maskedKey: "papero_••••••••8x9f",
+    key: "papero_realapikey8x9f",
     tier: "BASIC",
     created: "Sep 28, 2024",
     usage: 450,
@@ -76,8 +76,8 @@ const initialKeys: ApiKey[] = [
   {
     id: "3",
     name: "Admin Script Runner",
-    maskedKey: "distill_••••••••z0pq",
-    key: "distill_realapikeyz0pq",
+    maskedKey: "papero_••••••••z0pq",
+    key: "papero_realapikeyz0pq",
     tier: "ADMIN",
     created: "Sep 15, 2024",
     usage: 8120,
@@ -301,7 +301,7 @@ export default function ApiKeysPage() {
               
               <div className="flex-grow w-full">
                 <h2 className="font-caveat text-4xl text-ink mb-2">Forge a new key ✦</h2>
-                <p className="font-sans text-charcoal/60 mb-6">Create a new key to access Distill&apos;s extraction engines programmatically.</p>
+                <p className="font-sans text-charcoal/60 mb-6">Create a new key to access Papero&apos;s extraction engines programmatically.</p>
                 
                 <form onSubmit={handleGenerate} className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
@@ -399,19 +399,19 @@ export default function ApiKeysPage() {
               <DoodleCard className="p-8 bg-[#FFFdf8] flex flex-col gap-8">
                 <div className="space-y-4 font-sans text-charcoal/80 text-base leading-relaxed">
                   <p>
-                    Your API keys grant direct programmatic access to Distill's powerful extraction engine. This lets you bypass the visual dashboard and integrate the automated paper summarization right into your own apps, scripts, or lab workflows.
+                    Your API keys grant direct programmatic access to Papero's powerful extraction engine. This lets you bypass the visual dashboard and integrate the automated paper summarization right into your own apps, scripts, or lab workflows.
                   </p>
                   
                   <div className="bg-cream/50 p-4 border-l-4 border-olive rounded-r flex flex-col gap-2 shadow-sm">
                     <strong className="text-ink">1. The Endpoint</strong>
                     <p className="text-sm">Submit scholarly article PMIDs or raw PDF text strings to the endpoint via a POST payload.</p>
-                    <code className="bg-[#FFFdf8] border border-charcoal/10 rounded px-3 py-2 text-charcoal shadow-sm block w-fit font-mono text-sm">POST https://distill-ai-one.vercel.app/api/summarize</code>
+                    <code className="bg-[#FFFdf8] border border-charcoal/10 rounded px-3 py-2 text-charcoal shadow-sm block w-fit font-mono text-sm">POST https://papero-ai.vercel.app/api/summarize</code>
                   </div>
 
                   <div className="bg-cream/50 p-4 border-l-4 border-mustard rounded-r flex flex-col gap-2 shadow-sm">
                     <strong className="text-ink">2. Authentication</strong>
                     <p className="text-sm">Pass your generated API key into the HTTP <code className="bg-charcoal/5 px-1.5 py-0.5 rounded font-mono">headers</code> using the standard Bearer Token specification. Never expose this key in public frontend client code (like a basic React app); keep it safely tucked away on your backend Node or Python servers!</p>
-                    <code className="bg-[#FFFdf8] border border-charcoal/10 rounded px-3 py-2 text-charcoal shadow-sm block w-fit font-mono text-sm tracking-tight text-sage font-bold">Authorization: Bearer distill_xxx...</code>
+                    <code className="bg-[#FFFdf8] border border-charcoal/10 rounded px-3 py-2 text-charcoal shadow-sm block w-fit font-mono text-sm tracking-tight text-sage font-bold">Authorization: Bearer papero_xxx...</code>
                   </div>
 
                   <div className="bg-cream/50 p-4 border-l-4 border-terracotta rounded-r flex flex-col gap-2 shadow-sm">
