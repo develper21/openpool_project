@@ -5,7 +5,7 @@ import DoodleCard from "@/components/ui/DoodleCard";
 import DoodleButton from "@/components/ui/DoodleButton";
 
 export default function AdminSettingsPage() {
-  const [prompt, setPrompt] = useState(`You are Distill, a research paper summarizer. Given a scientific paper, produce a structured summary with these sections:
+  const [prompt, setPrompt] = useState(`You are Papero, a research paper summarizer. Given a scientific paper, produce a structured summary with these sections:
 1. TL;DR (2-3 sentences)
 2. Key Findings (bullet points)
 3. Methodology (brief overview)
