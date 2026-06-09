@@ -55,7 +55,7 @@ export default function Footer() {
                 <path d="M 14 8 L 26 8" stroke="#F5F0E8" strokeWidth="2" strokeLinecap="round" />
                 <path d="M 10 28 C 13 26, 17 30, 20 28 C 23 26, 27 30, 30 28" stroke="#F5F0E8" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
               </svg>
-              <span className="font-caveat text-3xl font-bold tracking-wide">Distill</span>
+              <span className="font-caveat text-3xl font-bold tracking-wide">Papero</span>
             </Link>
             <p className="font-sans text-sm text-cream/60 max-w-xs">
               Turning complex academic research into structured, actionable intelligence.
