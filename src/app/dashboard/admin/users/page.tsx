@@ -243,7 +243,7 @@ export default function AdminUsersPage() {
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-charcoal/80">Email</label>
-                <input type="email" className="w-full bg-cream/50 border-b-2 border-charcoal/20 focus:outline-none focus:border-terracotta px-3 py-2 transition-colors" placeholder="ada@distill.science" />
+                <input type="email" className="w-full bg-cream/50 border-b-2 border-charcoal/20 focus:outline-none focus:border-terracotta px-3 py-2 transition-colors" placeholder="ada@papero.science" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-charcoal/80">Role</label>
@@ -255,7 +255,7 @@ export default function AdminUsersPage() {
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-charcoal/80">Temporary Password</label>
-                <input type="text" className="w-full bg-cream/50 border-b-2 border-charcoal/20 focus:outline-none focus:border-terracotta px-3 py-2 transition-colors font-mono text-sm" defaultValue="WelcomeToDistill123!" />
+                <input type="text" className="w-full bg-cream/50 border-b-2 border-charcoal/20 focus:outline-none focus:border-terracotta px-3 py-2 transition-colors font-mono text-sm" defaultValue="WelcomeToPapero123!" />
               </div>
             </div>
 
