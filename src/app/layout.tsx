@@ -15,8 +15,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Distill",
-  description: "Distill — Doodle × Mid-Century Modern design system",
+  title: "Papero",
+  description: "Papero — AI-powered research paper summarizer",
 };
 
 import { Providers } from "@/components/Providers";
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${caveat.variable} ${dmSans.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased" suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>
