@@ -71,7 +71,7 @@ const endpoints = [
     path: "/api/summarize",
     desc: "Extracts metadata and generates a structured summary for a given PubMed ID or PDF extract.",
     auth: "BASIC",
-    req: `fetch('https://distill-ai-one.vercel.app/api/summarize', {
+    req: `fetch('https://papero-ai.vercel.app/api/summarize', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ const endpoints = [
     path: "/api/summary/:id",
     desc: "Retrieve a previously generated summary by its ID.",
     auth: "BASIC",
-    req: `GET https://distill-ai-one.vercel.app/api/summary/sum_12345abc
+    req: `GET https://papero-ai.vercel.app/api/summary/sum_12345abc
 Authorization: Bearer YOUR_API_KEY`,
     res: `{
   "id": "sum_12345abc",
@@ -108,7 +108,7 @@ Authorization: Bearer YOUR_API_KEY`,
     path: "/api/summaries",
     desc: "List all accessible summaries, with optional pagination and filtering.",
     auth: "BASIC",
-    req: `GET https://distill-ai-one.vercel.app/api/summaries?limit=10&page=1
+    req: `GET https://papero-ai.vercel.app/api/summaries?limit=10&page=1
 Authorization: Bearer YOUR_API_KEY`,
     res: `{
   "data": [
@@ -124,7 +124,7 @@ Authorization: Bearer YOUR_API_KEY`,
     path: "/api/feedback/:id",
     desc: "Submit a rating or text feedback for an extraction.",
     auth: "BASIC",
-    req: `POST https://distill-ai-one.vercel.app/api/feedback/sum_12345abc
+    req: `POST https://papero-ai.vercel.app/api/feedback/sum_12345abc
 Content-Type: application/json
 
 { "rating": 5, "text": "Perfect extraction" }`,
@@ -134,9 +134,9 @@ Content-Type: application/json
     id: "post-auth-register",
     method: "POST",
     path: "/api/auth/register",
-    desc: "Create a new Distill account programmatically.",
+    desc: "Create a new Papero account programmatically.",
     auth: "NONE",
-    req: `POST https://distill-ai-one.vercel.app/api/auth/register
+    req: `POST https://papero-ai.vercel.app/api/auth/register
 Content-Type: application/json
 
 { "email": "dev@example.com", "password": "...", "name": "..." }`,
@@ -148,7 +148,7 @@ Content-Type: application/json
     path: "/api/auth/login",
     desc: "Authenticate and receive a JWT session token.",
     auth: "NONE",
-    req: `POST https://distill-ai-one.vercel.app/api/auth/login
+    req: `POST https://papero-ai.vercel.app/api/auth/login
 Content-Type: application/json
 
 { "email": "dev@example.com", "password": "..." }`,
@@ -160,7 +160,7 @@ Content-Type: application/json
     path: "/api/admin/users",
     desc: "List all registered users (Admin only).",
     auth: "ADMIN",
-    req: `GET https://distill-ai-one.vercel.app/api/admin/users
+    req: `GET https://papero-ai.vercel.app/api/admin/users
 Authorization: Bearer YOUR_ADMIN_KEY`,
     res: `{
   "users": [ ... ],
@@ -173,7 +173,7 @@ Authorization: Bearer YOUR_ADMIN_KEY`,
     path: "/api/admin/analytics",
     desc: "Retrieve global API usage analytics.",
     auth: "ADMIN",
-    req: `GET https://distill-ai-one.vercel.app/api/admin/analytics?period=7d
+    req: `GET https://papero-ai.vercel.app/api/admin/analytics?period=7d
 Authorization: Bearer YOUR_ADMIN_KEY`,
     res: `{
   "period": "7d",
@@ -210,7 +210,7 @@ export default function DocsPage() {
         setTestResponse(JSON.stringify({
           keyFindings: "The mock request was successful. You bypassed the real engine.",
           methodology: "Simulated endpoint trigger.",
-          conclusions: "The Distill API integration is seamless and fast.",
+          conclusions: "The Papero API integration is seamless and fast.",
           limitations: "This is a sandbox response, no real NLP extraction occurred.",
           paperTitle: `PubMed Mock Article ${testPmid}`,
           year: "2024"
@@ -246,7 +246,7 @@ export default function DocsPage() {
       {/* Docs Minimal Navbar */}
       <header className="sticky top-0 z-50 w-full bg-[#FFFdf8]/90 backdrop-blur border-b-2 border-charcoal/10 px-6 py-4 flex justify-between items-center">
         <Link href="/" className="font-caveat text-4xl text-ink tracking-tight flex items-center gap-2">
-          <span>Distill</span>
+          <span>Papero</span>
           <span className="text-terracotta">✦</span>
           <span className="text-xl text-charcoal/40 ml-2 border-l border-charcoal/20 pl-4 font-mono">DOCS</span>
         </Link>
@@ -285,7 +285,7 @@ export default function DocsPage() {
         <main className="flex-1 pt-12 px-6 lg:px-10 lg:border-l-2 border-charcoal/10 border-dashed">
           <h1 className="font-caveat text-5xl text-ink mb-4">Endpoints API Reference</h1>
           <p className="font-sans text-lg text-charcoal/70 mb-10 pb-8 border-b-2 border-charcoal/10">
-            Interact programmatically with the Distill paper extraction tools. All endpoints use standard HTTP methods and return standard JSON responses. Make sure to authenticate via the HTTP Authorization header unless otherwise noted.
+            Interact programmatically with the Papero paper extraction tools. All endpoints use standard HTTP methods and return standard JSON responses. Make sure to authenticate via the HTTP Authorization header unless otherwise noted.
           </p>
           
           <div className="space-y-12">
@@ -354,7 +354,7 @@ export default function DocsPage() {
                           <input 
                             type="password" 
                             className="bg-cream border-b-2 border-charcoal/30 px-3 py-2 font-mono text-sm focus:outline-none focus:border-olive text-ink"
-                            placeholder="distill_..."
+                            placeholder="papero_..."
                             value={testApiKey}
                             onChange={e => setTestApiKey(e.target.value)}
                           />
