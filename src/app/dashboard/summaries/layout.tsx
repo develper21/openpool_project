@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Library | Distill',
+  title: 'Library | Papero',
   description: 'Your saved research library.',
 };
 
