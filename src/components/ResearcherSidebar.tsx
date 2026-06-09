@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import DoodleTag from "@/components/ui/DoodleTag";
 
 /**
@@ -64,7 +63,7 @@ export default function ResearcherSidebar() {
               <circle cx="22" cy="30" r="0.8" fill="#8FAF72" opacity="0.3" />
             </svg>
             <span className="font-caveat text-2xl text-cream font-bold tracking-wide">
-              Distill
+              Papero
             </span>
           </Link>
 
@@ -123,6 +122,17 @@ export default function ResearcherSidebar() {
               </DoodleTag>
             </div>
           </div>
+          <button
+            onClick={() => signOut({ callbackUrl: '/login' })}
+            className="p-2 rounded-lg hover:bg-cream/20 transition-colors"
+            title="Logout"
+          >
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#F5F0E8" strokeWidth="1.5">
+              <path d="M 9 12 L 9 3 L 12 6 L 9 3 L 6 6" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 2 10 L 9 10" strokeLinecap="round" />
+              <path d="M 9 10 C 9 13, 11 16, 15 16 L 16 16 C 18 16, 19 15, 19 13 L 19 7 C 19 5, 18 4, 16 4 L 15 4 C 11 4, 9 7, 9 10" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         </div>
       </aside>
 
