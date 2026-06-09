@@ -234,8 +234,8 @@ export default function SummarizePage() {
               <path d="M 1 0 C 2 30, 0 60, 1 100" stroke="#2C2C2C" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.2" />
             </svg>
             <div className="my-6 relative flex items-center justify-center">
-              <circle cx="20" cy="20" r="18" fill="#F5F0E8" stroke="#2C2C2C" strokeWidth="1.5" className="absolute" style={{width: 40, height: 40, top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
               <svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <circle cx="20" cy="20" r="18" fill="#F5F0E8" stroke="#2C2C2C" strokeWidth="1.5" />
                 <circle cx="20" cy="20" r="16" fill="#EDE8DC" stroke="#2C2C2C" strokeWidth="1" strokeDasharray="2 4" />
               </svg>
               <span className="font-caveat text-2xl text-charcoal/80 relative z-10 block translate-y-[2px]">OR</span>
@@ -332,7 +332,7 @@ export default function SummarizePage() {
               <RunningScientistIllustration />
             </div>
             <h3 className="font-caveat text-4xl text-ink animate-pulse">
-              Distilling your paper...
+              Analyzing your paper...
             </h3>
             <p className="font-sans text-base text-charcoal/50 mt-2">
               Extracting key findings, methodology, and limitations via Gemini 1.5 Flash
