@@ -87,7 +87,7 @@ export default function LoginPage() {
                 stroke="#1A1A2E" strokeWidth="1.8" strokeLinecap="round" fill="#8FAF72" fillOpacity="0.2" />
               <path d="M 14 8 L 26 8" stroke="#1A1A2E" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            <span className="font-caveat text-xl text-ink font-bold">Distill</span>
+            <span className="font-caveat text-xl text-ink font-bold">Papero</span>
           </Link>
         </div>
 
@@ -98,7 +98,7 @@ export default function LoginPage() {
               <div className="text-center">
                 <h1 className="font-caveat text-4xl text-ink mb-1">Welcome back</h1>
                 <p className="font-sans text-sm text-charcoal/50">
-                  Sign in to your Distill account
+                  Sign in to your Papero account
                 </p>
               </div>
 
@@ -145,18 +145,6 @@ export default function LoginPage() {
                 >
                   {loading ? "Signing in..." : "Sign In"}
                 </DoodleButton>
-
-                {/* Quick Demo Login */}
-                <div className="flex flex-col gap-2 pt-2 border-t-2 border-charcoal/10 border-dashed mt-4">
-                  <span className="font-caveat text-charcoal/50 text-center mb-1">Quick Access:</span>
-                  <button
-                    type="button"
-                    onClick={() => { setEmail("drrajeshkumar@example.com"); setPassword("password123"); }}
-                    className="w-full bg-charcoal/5 hover:bg-olive/10 text-olive font-sans text-xs font-bold py-2 rounded border border-charcoal/10 transition-colors"
-                  >
-                    Fill User
-                  </button>
-                </div>
               </form>
 
               {/* Divider */}
