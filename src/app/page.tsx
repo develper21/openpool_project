@@ -29,7 +29,7 @@ export default function Home() {
 
           {/* Subheading */}
           <p className="font-sans text-base sm:text-lg md:text-xl text-charcoal/65 max-w-2xl leading-relaxed">
-            Distill is a REST API that summarizes scientific publications for
+            Papero is a REST API that summarizes scientific publications for
             pharma researchers. Send a PubMed ID. Get structured intelligence.
           </p>
 
@@ -290,7 +290,7 @@ function HowItWorksSection() {
               02
             </span>
             <h3 className="font-caveat text-2xl text-ink mb-1">
-              AI Distills It
+              AI Analyzes It
             </h3>
             <p className="font-sans text-sm text-charcoal/60 leading-relaxed">
               Our models read, understand, and extract structured insights —
