@@ -26,7 +26,7 @@ export default function BlueprintIllustration({ className = "" }: { className?: 
       
       {/* Title Box */}
       <rect x="20" y="240" width="180" height="40" fill="none" stroke="#F4E9CD" strokeWidth="1.5" />
-      <text x="30" y="255" fill="#F4E9CD" fontSize="10" fontFamily="monospace" letterSpacing="2">DISTILL API v1.0</text>
+      <text x="30" y="255" fill="#F4E9CD" fontSize="10" fontFamily="monospace" letterSpacing="2">PAPERO API v1.0</text>
       <text x="30" y="270" fill="#F4E9CD" fontSize="8" fontFamily="monospace" opacity="0.7">DWG NO. 84-B // ARCHITECTURE</text>
 
       {/* --- SCHEMATIC DIAGRAM --- */}
@@ -50,11 +50,11 @@ export default function BlueprintIllustration({ className = "" }: { className?: 
         <text x="50" y="15" fill="#E26D5C" fontSize="10" fontFamily="Caveat, cursive" textAnchor="middle">Auth / JWT</text>
       </g>
 
-      {/* 2. DISTILL Core Box */}
+      {/* 2. PAPERO Core Box */}
       <g transform="translate(320, 60)">
         {/* Main brain module */}
         <polygon points="40,0 160,0 200,40 200,160 160,200 40,200 0,160 0,40" fill="none" stroke="#FFFdf8" strokeWidth="3" />
-        <text x="100" y="100" fill="#FFFdf8" fontSize="24" fontFamily="Caveat, cursive" textAnchor="middle" fontWeight="bold">DISTILL CORE</text>
+        <text x="100" y="100" fill="#FFFdf8" fontSize="24" fontFamily="Caveat, cursive" textAnchor="middle" fontWeight="bold">PAPERO CORE</text>
         <text x="100" y="120" fill="#FFFdf8" fontSize="10" fontFamily="monospace" opacity="0.8" textAnchor="middle">ROUTER & PARSER</text>
         
         {/* Nodes on the core */}
