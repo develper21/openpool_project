@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Analytics | Distill',
+  title: 'Analytics | Papero',
   description: 'Review feedback and model performance.',
 };
 
