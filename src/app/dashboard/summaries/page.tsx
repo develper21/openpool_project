@@ -213,7 +213,7 @@ export default function SummariesPage() {
           {/* ── HEADER ── */}
           <div className="mb-10 animate-in slide-in-from-bottom-4 duration-500">
             <h1 className="font-caveat text-5xl text-ink mb-2">Your Research Library ✦</h1>
-            <p className="font-sans text-charcoal/60 text-lg">Every paper you&apos;ve distilled, saved and searchable</p>
+            <p className="font-sans text-charcoal/60 text-lg">Every paper you&apos;ve analyzed, saved and searchable</p>
             
             <div className="w-full mt-6 flex justify-center h-48 sm:h-56 bg-[#FFFdf8] border-2 border-charcoal/10 rounded-2xl overflow-hidden relative">
               <LibraryShelfIllustration className="w-full h-full object-cover opacity-90" />
@@ -276,7 +276,7 @@ export default function SummariesPage() {
             // EMPTY STATE (Total empty)
             <div className="flex flex-col items-center justify-center py-20 animate-in fade-in">
               <EmptyDeskIllustration className="w-64 h-64 mb-6 opacity-80" />
-              <h3 className="font-caveat text-4xl text-charcoal/40 mb-6">Nothing distilled yet.</h3>
+              <h3 className="font-caveat text-4xl text-charcoal/40 mb-6">Nothing analyzed yet.</h3>
               <a href="/dashboard/summarize">
                 <DoodleButton variant="primary">
                   Summarize your first paper →
