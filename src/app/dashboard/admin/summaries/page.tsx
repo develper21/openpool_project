@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import DoodleCard from "@/components/ui/DoodleCard";
-import DoodleButton from "@/components/ui/DoodleButton";
 import DoodleTag from "@/components/ui/DoodleTag";
 import { fetchWithAuth } from "@/lib/fetchWithAuth";
 
@@ -14,6 +13,31 @@ export default function AdminSummariesPage() {
   
   const [summaries, setSummaries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [bookData, setBookData] = useState<any[][]>([]);
+
+  // Generate deterministic book data on client-side only
+  useEffect(() => {
+    const books: any[][] = [];
+    for (let shelf = 0; shelf < 5; shelf++) {
+      const shelfBooks: any[] = [];
+      for (let row = 0; row < 3; row++) {
+        const bookCount = 6 + Math.floor(Math.random() * 3);
+        const rowBooks: any[] = [];
+        for (let b = 0; b < bookCount; b++) {
+          const colors = ["#E26D5C", "#D4AF37", "#8FAF72", "#2C2C2C", "#8FAF72", "#D4AF37", "#E26D5C", "#2C2C2C", "#D4AF37"];
+          rowBooks.push({
+            x: 108 + shelf * 220 + b * 14,
+            y: 25 + row * 40,
+            color: colors[b % colors.length],
+            opacity: 0.7 + Math.random() * 0.3
+          });
+        }
+        shelfBooks.push(rowBooks);
+      }
+      books.push(shelfBooks);
+    }
+    setBookData(books);
+  }, []);
 
   useEffect(() => {
     let debounceTimer: NodeJS.Timeout;
@@ -81,11 +105,9 @@ export default function AdminSummariesPage() {
                   <g key={row}>
                     <line x1={100 + shelf * 220} y1={60 + row * 40} x2={300 + shelf * 220} y2={60 + row * 40} stroke="#2C2C2C" strokeWidth="2" />
                     {/* Books */}
-                    {Array.from({ length: 6 + Math.floor(Math.random() * 3) }).map((_, b) => {
-                      const bx = 108 + shelf * 220 + b * 14;
-                      const colors = ["#E26D5C", "#D4AF37", "#8FAF72", "#2C2C2C", "#8FAF72", "#D4AF37", "#E26D5C", "#2C2C2C", "#D4AF37"];
-                      return <rect key={b} x={bx} y={25 + row * 40} width="10" height={32} fill={colors[b % colors.length]} opacity={0.7 + Math.random() * 0.3} rx="1" />;
-                    })}
+                    {bookData[shelf]?.[row]?.map((book: any, b: number) => (
+                      <rect key={b} x={book.x} y={book.y} width="10" height={32} fill={book.color} opacity={book.opacity} rx="1" />
+                    ))}
                   </g>
                 ))}
               </g>
