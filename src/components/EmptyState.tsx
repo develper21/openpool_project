@@ -25,7 +25,7 @@ interface EmptyStateProps {
 const variantConfig: Record<EmptyStateVariant, { component: React.FC<{className?: string}>, title: string, desc: string }> = {
   "no-summaries": {
     component: EmptyDeskIllustration,
-    title: "Nothing distilled yet.",
+    title: "Nothing analyzed yet.",
     desc: "Your research desk is completely clear. Drag in a PDF or paste a PubMed ID to begin extracting knowledge.",
   },
   "no-feedback": {
@@ -36,7 +36,7 @@ const variantConfig: Record<EmptyStateVariant, { component: React.FC<{className?
   "no-keys": {
     component: EmptyKeyBoardIllustration,
     title: "No API keys created.",
-    desc: "Your key hooks are bare. Forge a new key to start authenticating with the Distill API.",
+    desc: "Your key hooks are bare. Forge a new key to start authenticating with the Papero API.",
   },
   "no-results": {
     component: EmptyMicroscopeIllustration,
