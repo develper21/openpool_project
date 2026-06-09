@@ -114,7 +114,7 @@ export default function AdminKeysPage() {
                         </td>
                         <td className="py-4 px-5">
                           <div className="flex items-center gap-2">
-                            <code className="bg-charcoal/5 px-2 py-1 rounded text-charcoal font-mono text-xs border border-charcoal/10">{k.key ? k.key.substring(0, 15) + "..." : "distill_••••••••"}</code>
+                            <code className="bg-charcoal/5 px-2 py-1 rounded text-charcoal font-mono text-xs border border-charcoal/10">{k.key ? k.key.substring(0, 15) + "..." : "papero_••••••••"}</code>
                             {k.status === "Active" && (
                               <button onClick={() => copyToClipboard(k.key)} className="text-charcoal/40 hover:text-terracotta transition-colors" title="Copy Key">
                                 <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
