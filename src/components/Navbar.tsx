@@ -63,7 +63,7 @@ export default function Navbar() {
             <circle cx="19" cy="34" r="0.8" fill="#6B7C3A" opacity="0.25" />
           </svg>
           <span className="font-caveat text-2xl text-ink font-bold tracking-wide">
-            Distill
+            Papero
           </span>
         </a>
 
